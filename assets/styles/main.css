@@ -18,7 +18,6 @@
     --carrousel-img-w: 800px;
     --a-text-decoration: none;
 }
-
 * {
     margin: var(--absolute-zero);
     padding: var(--absolute-zero);
@@ -34,7 +33,6 @@
     padding-top: var(--carrousel-padding-top);
     margin: var(--margin-auto);
     scroll-snap-type: var(--scroll-snap-type-parent);
-
     & > div {
         scroll-snap-align: var(--scroll-snap-align-div);
     }
@@ -42,9 +40,7 @@
         height: var(--carrousel-img-h);
         width: var(--carrousel-img-w);
     }
-
 }
-
 .container-link {
     width: var(--container-link-width);
     margin: var(--margin-auto);
