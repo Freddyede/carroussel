@@ -1,67 +1,57 @@
-*{
-    margin: 0;
-    padding: 0;
+:root {
+    --first-color: #000000;
+    --display-mode: flex;
+    --absolute-zero: 0;
+    --margin-auto: auto;
+    --container-link-width: 50%;
+    --container-link-justify-content: space-around;
+    --carrousel-height: 400px;
+    --carrousel-width: 762px;
+    --carrousel-overflow: hidden;
+    --carrousel-overflow-x: auto;
+    --carrousel-scroll-behavior: smooth;
+    --carrousel-flex-direction: row;
+    --carrousel-padding-top: 15%;
+    --scroll-snap-type-parent: x mandatory;
+    --scroll-snap-align-div: start;
+    --carrousel-img-h: 400px;
+    --carrousel-img-w: 800px;
+    --a-text-decoration: none;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    margin: auto;
+* {
+    margin: var(--absolute-zero);
+    padding: var(--absolute-zero);
 }
-.container-link {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
 .carrousel {
-    height: 400px;
-    width: 762px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    display: flex;
-    scroll-behavior: smooth;
-    flex-direction: row;
+    height: var(--carrousel-height);
+    width: var(--carrousel-width);
+    overflow: var(--carrousel-overflow);
+    overflow-x: var(--carrousel-overflow-x);
+    display: var(--display-mode);
+    scroll-behavior: var(--carrousel-scroll-behavior);
+    flex-direction: var(--carrousel-flex-direction);
+    padding-top: var(--carrousel-padding-top);
+    margin: var(--margin-auto);
+    scroll-snap-type: var(--scroll-snap-type-parent);
 
-    margin: 5% auto;
-    scroll-snap-type: x mandatory;
-}
-.carrousel > div {
-    scroll-snap-align: start;
-}
-
-.carrousel li {
-    height: 400px;
-    width: 800px;
-}
-
-.carrousel div img {
-    height: 400px;
-    width: 800px;
-}
-
-.before{
-    position:absolute;
-    top: 200px;
-    left: 25%;
-}
-
-.after{
-    position:absolute;
-    top: 200px;
-    left: 75%;
-}
-
-.container .after:hover .container .carrousel {
-    border: 1px solid red;
-}
-
-@keyframes animate {
-    0% {
-        transform: translateX(0%);
+    & > div {
+        scroll-snap-align: var(--scroll-snap-align-div);
     }
-    100% {
-        transform: translateX(100%);
+    & div img {
+        height: var(--carrousel-img-h);
+        width: var(--carrousel-img-w);
+    }
+
+}
+
+.container-link {
+    width: var(--container-link-width);
+    margin: var(--margin-auto);
+    display: var(--display-mode);
+    justify-content: var(--container-link-justify-content);
+    & a {
+        text-decoration: var(--a-text-decoration);
+        color: var(--first-color);
     }
 }
