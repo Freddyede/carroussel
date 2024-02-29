@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: auto;
+}
+.container-link {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.carrousel {
+    height: 400px;
+    width: 762px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    scroll-behavior: smooth;
+    flex-direction: row;
+
+    margin: 5% auto;
+    scroll-snap-type: x mandatory;
+}
+.carrousel > div {
+    scroll-snap-align: start;
+}
+
+.carrousel li {
+    height: 400px;
+    width: 800px;
+}
+
+.carrousel div img {
+    height: 400px;
+    width: 800px;
+}
+
+.before{
+    position:absolute;
+    top: 200px;
+    left: 25%;
+}
+
+.after{
+    position:absolute;
+    top: 200px;
+    left: 75%;
+}
+
+.container .after:hover .container .carrousel {
+    border: 1px solid red;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
