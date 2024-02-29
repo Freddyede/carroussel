@@ -3,8 +3,8 @@
     --display-mode: flex;
     --absolute-zero: 0;
     --margin-auto: auto;
-    --container-link-width: 50%;
-    --container-link-justify-content: space-around;
+    --container-link-width: 30%;
+    --container-link-justify-content: space-between;
     --carrousel-height: 400px;
     --carrousel-width: 762px;
     --carrousel-overflow: hidden;
